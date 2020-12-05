@@ -39,31 +39,15 @@ function userDertails(obj) {
     return wrapper;
 }
 
-$("a.topbar-menuItem").click(function(){
-    $("a.topbar-menuItem.topbar-active").removeClass("topbar-active");
-    $(this).addClass("topbar-active");
- });
+// $("a.topbar-menuItem").click(function(){
+//     $("a.topbar-menuItem.topbar-active").removeClass("topbar-active");
+//     $(this).addClass("topbar-active");
+//  });
 
 var ordersPage = document.getElementById('ordersPage');
 var productsPage = document.getElementById('productsPage');
 var usersPage = document.getElementById('usersPage');
 
-// ordersPage.onclick = function () {
-//     ordersPage.classList.add("topbar-active");
-//     productsPage.classList.remove("topbar-active");
-//     usersPage.classList.remove("topbar-active");
-// }
-// productsPage.onclick = function () {
-//     ordersPage.classList.remove("topbar-active");
-//     productsPage.classList.add("topbar-active");
-//     usersPage.classList.remove("topbar-active");
-// }
-// usersPage.onclick = function () {
-//     // ordersPage.classList.remove("topbar-active");
-//     // productsPage.classList.remove("topbar-active");
-//     usersPage.topbar-active
-//     usersPage.classList.addClass("topbar-active");
-// }
 
 var mainDiv = document.getElementById('users-tbody');
 
