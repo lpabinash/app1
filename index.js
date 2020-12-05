@@ -8,11 +8,13 @@ var data=localStorage.getItem('authorized')
 
 submit.onclick=(e)=>{
     e.preventDefault()
-    console.log(username.innerText)
+    // console.log(username.innerText)
         if(username.innerText===password.innerText){
             localStorage.setItem("authorized","yes")
-            // window.location = "./OrderListingPage.html";
+            window.alert("successful")
+            window.location = "./OrderListingPage.html";
         }else{
+            window.alert("failed")
             window.location="./index.html"
         }
     }
