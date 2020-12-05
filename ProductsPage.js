@@ -51,6 +51,7 @@ var data = JSON.parse(this.responseText);
 for(var i=0; i<data.length; i++) {
     console.log(data[i]);
     // if(data[i].id === localStorage.getItem("id"))
+    document.getElementById("count").innerText="Count:"+data.length
         detPage.appendChild(productdetail(data[i]));
 }
 }
@@ -59,7 +60,6 @@ xhttp.send();
 var expired=document.getElementById("filter1");
 var lowStock=document.getElementById("filter2")
 var d = Date.parse(new Date());
-// var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 lowStock.onclick=(e)=>{
     
     if(e.target.checked){
@@ -69,10 +69,13 @@ lowStock.onclick=(e)=>{
         if(this.readyState === 4) {
             detPage.innerHTML="";
         var data = JSON.parse(this.responseText);
+        let len=0
         for(var i=0; i<data.length; i++) {
            
-            if(data[i].stock > 100){
+            if(data[i].stock < 100){
                 console.log(data[i]);
+                ++len
+                document.getElementById("count").innerText="Count:"+len
                 detPage.appendChild(productdetail(data[i]));
             }
             
@@ -87,9 +90,12 @@ xhttp.send();
         if(this.readyState === 4) {
             detPage.innerHTML="";
         var data = JSON.parse(this.responseText);
+        let len=0
         for(var i=0; i<data.length; i++) {
             console.log(data[i]);
+            ++len
     // if(data[i].id === localStorage.getItem("id"))
+    document.getElementById("count").innerText="Count:"+len
         detPage.appendChild(productdetail(data[i]));
 }
 }
@@ -106,10 +112,13 @@ expired.onclick=(e)=>{
         if(this.readyState === 4) {
             detPage.innerHTML="";
         var data = JSON.parse(this.responseText);
+        let len=0
         for(var i=0; i<data.length; i++) {
            
-            if(Date.parse(data[i].expiryDate) > d){
+            if(Date.parse(data[i].expiryDate) < d){
                 console.log(data[i]);
+                ++len
+                document.getElementById("count").innerText="Count:"+len
                 detPage.appendChild(productdetail(data[i]));
             }
             
@@ -125,9 +134,12 @@ xhttp.send();
         if(this.readyState === 4) {
             detPage.innerHTML="";
         var data = JSON.parse(this.responseText);
+        let len=0
         for(var i=0; i<data.length; i++) {
             console.log(data[i]);
+            ++len
     // if(data[i].id === localStorage.getItem("id"))
+    document.getElementById("count").innerText="Count:"+len
         detPage.appendChild(productdetail(data[i]));
 }
 }

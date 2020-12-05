@@ -1,0 +1,45 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 48px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px #ccc;
+    background-color: #fff;
+    justify-content: space-between;
+}
+.topbar-leftmenu {
+    display: flex;
+    align-items: center;
+}
+.topbar-menuItem {
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(0,0,0,.8);
+    padding: 24px 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .6px;
+    margin: 0 10px;
+}
+.topbar-logoWrapper {
+    margin-right: 36px;
+    display: flex;
+    align-items: center;
+}
+.topbar-logoWrapper img {
+    width: 34px;
+    height: 38px;
+    margin-right: 8px;
+}
+.topbar-Brandname {
+    font-size: 24px;
+    letter-spacing: -1px;
+    font-weight: 500;
+    margin: 0;
+    color: rgba(0,0,0,.8);
+}

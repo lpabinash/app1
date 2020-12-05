@@ -5,12 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="ProductsPage.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="topbar.css" />
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <header>
+    <div class="topbar">
+        <div class="topbar-leftmenu">
+            <div class="topbar-logoWrapper">
+                <img src="https://cdn.knoji.com/images/logo/kafene.jpg?aspect=center&snap=false" alt="Logo" />
+                <p class="topbar-Brandname">Kafene</p>
+            </div>
+            <nav>
+                <a id="ordersPage" class="topbar-menuItem" href="OrderListingPage.html">Orders</a>
+                <a id="productsPage" class="topbar-menuItem" href="ProductsPage.html">Products</a>
+                <a id="usersPage" class="topbar-menuItem" href="users.html">Users</a>
+            </nav>
+        </div>
+        <a class="topbar-menuItem" href="login.html">Logout</a>
+    </div>
+</header>
     
     <div id='mainwrapper'>
         <div id='subwrapper'>
@@ -18,14 +39,14 @@
         <div id="filters">
             <h1>Products</h1>
             <h3>Filters</h3>
-            <h4>Count:100</h4>
+            <h4 id="count"></h4>
             <div style=display:flex>
             <input type="checkbox" id="filter1" name="filter1" value="Bike">
-            <label for="filter1" style=font-size:16px> Expired</label><br>
+            <label for="filter1" id="filter" style=font-size:16px> Expired</label><br>
             </div>
             <div style=display:flex>
             <input type="checkbox" id="filter2" name="filter2" value="Car">
-            <label for="filter2" style=font-size:16px> Low Stock</label><br>
+            <label for="filter2" id="filter" style=font-size:16px> Low Stock</label><br>
             </div>
             
         </div>
