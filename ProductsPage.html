@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ProductsPage.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id='mainwrapper'>
+        <div id='subwrapper'>
+            
+        <div id="filters">
+            <h1>Products</h1>
+            <h3>Filters</h3>
+            <h4>Count:100</h4>
+            <div style=display:flex>
+            <input type="checkbox" id="filter1" name="filter1" value="Bike">
+            <label for="filter1" style=font-size:16px> Expired</label><br>
+            </div>
+            <div style=display:flex>
+            <input type="checkbox" id="filter2" name="filter2" value="Car">
+            <label for="filter2" style=font-size:16px> Low Stock</label><br>
+            </div>
+            
+        </div>
+        <div id="table">
+            <table class="userList-table">
+                <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Product Brand</th>
+                    <th style="min-width: 100px;">Expiry Date</th>
+                    <th>Unit Price</th>
+                    <th>Stock</th>
+
+                </tr>
+                <tbody id="prods">
+                    <tr id="userList-tableRow">
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        </div>
+    </div>
+    <script src="/ProductsPage.js"></script>
+</body>
+</html>
