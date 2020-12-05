@@ -1,15 +1,26 @@
 var username=document.getElementById("username")
 var password=document.getElementById("password")
 var submit= document.getElementById("submit")
+var logout=document.getElementById("logout")
+var data=localStorage.getItem('authorized')
 
 
 
 submit.onclick=(e)=>{
     e.preventDefault()
-    if(username.innerText===password.innerText){
-        localStorage.setItem("authorized","yes")
-        window.location = "./OrderListingPage.html";
-    }else{
-        localStorage.setItem("authorized","No")
+    console.log(username.innerText)
+        if(username.innerText===password.innerText){
+            localStorage.setItem("authorized","yes")
+            // window.location = "./OrderListingPage.html";
+        }else{
+            window.location="./index.html"
+        }
     }
+   
+
+
+
+logout.onclick=(e)=>{
+    e.preventDefault()
+    localStorage.setItem("authorized","no")
 }
